@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/feae338ef3.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Baines Deal Portfolio</title>
     <meta charset="UTF-8" />
   </head>
@@ -16,20 +20,21 @@
       <nav>
         <img class="logo" src="src/images/Logo.png" alt="Baines Deal's Logo" />
         <ul>
-          <li>About me</li>
-          <li>Projects</li>
-          <li>Contact me</li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
         </ul>
+        <button class="hamburger" id="hamburger"></button>
       </nav>
       <div class="statement-area">
         <div class="statement-text">
           <h1>Baines A. Deal</h1>
           <p>Full Stack Developer</p>
-          <div class="button">About me</div>
+          <div class="button"><a href="#about-me">About me</a></div>
         </div>
         <div class="socials">
           <div class="social">
-            <a href="https://www.facebook.com/baines.deal/">
+            <a target="_blank" href="https://www.facebook.com/baines.deal/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#ffffff"
@@ -44,7 +49,7 @@
             </a>
           </div>
           <div class="social">
-            <a href="https://www.linkedin.com/in/baines-deal/">
+            <a target="_blank" href="https://www.linkedin.com/in/baines-deal/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#ffffff"
@@ -59,7 +64,7 @@
             </a>
           </div>
           <div class="social">
-            <a href="https://github.com/BainesD">
+            <a target="_blank" href="https://github.com/BainesD">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#ffffff"
@@ -76,17 +81,167 @@
         </div>
       </div>
     </section>
-    <section class="sub-section">
+    <section class="sub-section" id="about-me">
       <div class="information">
         <h2>About me</h2>
-        <p>This is where my about me will go</p>
+        <p>
+          Before becoming a Full Stack Software Developer, I had a career as a
+          high school teacher, where I taught History and Science. I have always
+          had a deep love for education, but I discovered my true passion was in
+          programming while working with complex data sets to better understand
+          my students learning needs. I am dedicated to increasing my knowledge
+          and skills as a software developer so that I can help to create and
+          design programs which provide solutions to real world problems.
+        </p>
       </div>
       <div class="headshot-container">
         <img class="headshot" src="src/images/Headshot.jpg" />
       </div>
     </section>
-    <section></section>
-    <footer></footer>
+    <section class="sub-section-alternative" id="projects">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1/5</div>
+              <img
+                id="ProjOneImg"
+                class="project-image"
+                src="src/images/ProjectOne1.PNG"
+                alt=""
+                style="width: 100%"
+              />
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2/5</div>
+              <img
+                id="ProjOneImg"
+                class="project-image"
+                src="src/images/ProjectOne2.PNG"
+                alt=""
+                style="width: 100%"
+              />
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img2">
+                <div id="caption"></div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3/5</div>
+              <img
+                id="ProjOneImg"
+                class="project-image"
+                src="src/images/ProjectOne3.PNG"
+                alt=""
+                style="width: 100%"
+              />
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img3">
+                <div id="caption"></div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4/5</div>
+              <img
+                id="ProjOneImg"
+                class="project-image"
+                src="src/images/ProjectOne4.PNG"
+                alt=""
+                style="width: 100%"
+              />
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img4">
+                <div id="caption"></div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5/5</div>
+              <img
+                id="ProjOneImg"
+                class="project-image"
+                src="src/images/ProjectOne5.PNG"
+                alt=""
+                style="width: 100%"
+              />
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img">
+                <div id="caption"></div>
+              </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+          <h3>Wellido</h3>
+          <p class="subtext">
+            Wellido got it's name from a conversation I have had many times. It
+            goes a little something like this: <br />
+
+            <br />
+            "What are you feeling for dinner?" <br />
+            "I don't know. What are you feeling?" <br />
+            "I'm not sure." <br />
+            <br />
+            The answer of course is Wellido. The goal of this app was to help
+            make the decision about what's for dinner. In order to accomplish
+            this I used a ASP.NET MVC design pattern to make calls to both the
+            IPData and Google Places APIs. Using C#, HTML, and CSS I was able to
+            format the options into cards containing the most popular images
+            from Google's Place API.
+          </p>
+          <hr />
+          <p class="subtext"><a class="proj-links" href="https://github.com/BainesD/WelliDO" target="_blank">View Source Code</a></p>
+          <script src="src/app.js"></script>
+        </div>
+        <div class="project-card">
+          <img class="project-image" src="" alt="Project One Image" />
+          <h3>Project Two</h3>
+          <p class="subtext">This is ____</p>
+          <hr />
+          <p class="subtext">View here</p>
+        </div>
+        <div class="project-card">
+          <img class="project-image" src="" alt="Project One Image" />
+          <h3>Project Three</h3>
+          <p class="subtext">This is ____</p>
+          <hr />
+          <p class="subtext">View here</p>
+        </div>
+        <div class="project-card">
+          <img class="project-image" src="" alt="Project One Image" />
+          <h3>Project Four</h3>
+          <p class="subtext">This is ____</p>
+          <hr />
+          <p class="subtext">View here</p>
+        </div>
+      </div>
+    </section>
+    <footer id="contact-me">
+      <h2>Contact me</h2>
+      <p>bainesdeal@gmail.com</p>
+    </footer>
 
     <script src="src/app.js"></script>
   </body>

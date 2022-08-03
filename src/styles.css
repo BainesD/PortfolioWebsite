@@ -54,6 +54,9 @@ p {
 }
 
 .subtext {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-display: wrap;
   font-size: 15px;
   font-weight: 300;
 }
@@ -116,12 +119,12 @@ p {
 }
 
 .headshot {
-  width: 275px;
+  width: 300px;
   border-radius: 300px;
   margin-left: 80px;
-  height: 275px;
+  height: 300px;
   object-fit: cover;
-  object-position: 50% 35%;
+  object-position: 0px 22%;
 }
 
 .headshot-container {
@@ -129,11 +132,26 @@ p {
   align-items: center;
 }
 
+.scroll{
+width:50px;
+}
+
 .project-card {
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 580px;
   box-shadow: 5px 5px 20px rgb(197, 195, 195);
-  margin: 10px;
+  margin: 15px;
+  overflow: scroll;
+  padding: 5px;
+}
+
+.proj-links {
+  color: blue;
+  text-decoration: none;
+}
+
+.proj-links:hover{
+  color: rgba(0, 0, 156, 0.678);
 }
 
 .project-container {
@@ -148,11 +166,143 @@ p {
   }
 }
 
+
 .project-image {
-  margin-top: 25px;
-  width: 250px;
-  border-radius: 125px;
+  width: -moz-available; 
+  cursor: pointer;
+  transition: .3s;
 }
+
+/* .project-image:hover {opacity: .7;} */
+
+
+.mySlides:hover .content {
+  opacity: 1;
+}
+
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: initial;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+right:0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  background-color: rgba(0,0,0,0.2);
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.image-view {
+  position: fixed;
+  top:0;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  display: none;
+}
+
+.image-box {
+  width: 70vw;
+  height: 80vh;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  /* background: tomato; */
+  display: none;
+}
+
+#prev-btn, #next-btn {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+#prev-btn {
+  border-right:40px solid grey;
+  left: -50px;
+}
+
+#next-btn {
+  border-left: 40px solid grey;
+  right: -50px;
+}
+
+#next-btn:hover, #prev-btn:hover {
+  opacity: .6;
+}
+
 
 hr {
   margin-left: 20px;
@@ -206,5 +356,9 @@ a {
 
   .logo {
     display: none;
+  }
+  
+  .image-box {
+    height: 55vh;
   }
 }
