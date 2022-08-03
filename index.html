@@ -19,18 +19,24 @@
     <section class="statement">
       <nav>
         <img class="logo" src="src/images/Logo.png" alt="Baines Deal's Logo" />
-        <ul>
+        <ul id="nav-list">
           <li><a href="#about-me">About me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact-me">Contact me</a></li>
         </ul>
-        <button class="hamburger" id="hamburger"></button>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
       </nav>
       <div class="statement-area">
         <div class="statement-text">
           <h1>Baines A. Deal</h1>
           <p>Full Stack Developer</p>
-          <div class="button"><a href="#about-me">About me</a></div>
+          <div>
+            
+            <div class="button"><a href="#about-me">About me</a></div>
+            <div class="button"><a href="src/files/BainesDealResume.pdf" download>My Resume</a></div>
+          </div>
         </div>
         <div class="socials">
           <div class="social">
@@ -100,10 +106,11 @@
     </section>
     <section class="sub-section-alternative" id="projects">
       <h2>Projects</h2>
+
       <div class="project-container">
         <div class="project-card">
           <div class="slideshow-container">
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <div class="numbertext">1/5</div>
               <img
                 id="ProjOneImg"
@@ -112,14 +119,9 @@
                 alt=""
                 style="width: 100%"
               />
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img1">
-                <div id="caption"></div>
-              </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <div class="numbertext">2/5</div>
               <img
                 id="ProjOneImg"
@@ -128,14 +130,9 @@
                 alt=""
                 style="width: 100%"
               />
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img2">
-                <div id="caption"></div>
-              </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <div class="numbertext">3/5</div>
               <img
                 id="ProjOneImg"
@@ -144,14 +141,9 @@
                 alt=""
                 style="width: 100%"
               />
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img3">
-                <div id="caption"></div>
-              </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <div class="numbertext">4/5</div>
               <img
                 id="ProjOneImg"
@@ -160,14 +152,9 @@
                 alt=""
                 style="width: 100%"
               />
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img4">
-                <div id="caption"></div>
-              </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="mySlides1 fade">
               <div class="numbertext">5/5</div>
               <img
                 id="ProjOneImg"
@@ -176,11 +163,6 @@
                 alt=""
                 style="width: 100%"
               />
-              <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img">
-                <div id="caption"></div>
-              </div>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -212,29 +194,92 @@
             from Google's Place API.
           </p>
           <hr />
-          <p class="subtext"><a class="proj-links" href="https://github.com/BainesD/WelliDO" target="_blank">View Source Code</a></p>
+          <p class="subtext">
+            <a
+              class="proj-links"
+              href="https://github.com/BainesD/WelliDO"
+              target="_blank"
+              >View Source Code</a
+            >
+          </p>
           <script src="src/app.js"></script>
         </div>
+
         <div class="project-card">
-          <img class="project-image" src="" alt="Project One Image" />
-          <h3>Project Two</h3>
-          <p class="subtext">This is ____</p>
+          <img class="project-image" src="src/images/ProjTwo2.PNG" />
+          <h3>Best Buy MVC</h3>
+          <p class="subtext">
+            The goal of this project was to create a mock interface that would
+            be used to work with items stored in a MySQL database using the
+            principles of CRUD. I was able to use a simulated Best Buy store
+            database and an Object-Relational Mapper to access the MySQL
+            database.
+          </p>
           <hr />
-          <p class="subtext">View here</p>
+          <p class="subtext">
+            <a
+              class="proj-links"
+              href="https://github.com/BainesD/BestBuyMVC"
+              target="_blank"
+              >View Source Code</a
+            >
+          </p>
         </div>
         <div class="project-card">
-          <img class="project-image" src="" alt="Project One Image" />
-          <h3>Project Three</h3>
-          <p class="subtext">This is ____</p>
+          <img
+            class="project-image"
+            src="src/images/TacoParser.png"
+            alt="Project One Image"
+          />
+          <h3>TacoParser</h3>
+          <p class="subtext">
+            This project was one of the first that I completed. It was assigned
+            to me as a challenge while I was enrolled in my software development
+            bootcamp. The goal was to parse through a .csv file which contained
+            a series of Taco Bell Locations and determine which two were the
+            farthest apart. In order to accomplish this I was able to use the
+            GeoCoordinate.NetCore NuGet package to take the longitude and
+            latitude from the csv table and using a nested for loop iterate
+            through each location and compare the distance between the two.
+            Overall it was a very fun challenge and I enjoyed being able to
+            solve this logic based puzzle.
+          </p>
           <hr />
-          <p class="subtext">View here</p>
+          <p class="subtext">
+            <a
+              class="proj-links"
+              href="https://github.com/BainesD/TacoParser"
+              target="_blank"
+              >View Source Code</a
+            >
+          </p>
         </div>
         <div class="project-card">
-          <img class="project-image" src="" alt="Project One Image" />
-          <h3>Project Four</h3>
-          <p class="subtext">This is ____</p>
+          <img
+            class="project-image"
+            src="src/images/WeatherInfo.png"
+            alt="Project One Image"
+          />
+          <h3>Weather Info API</h3>
+          <p class="subtext">
+            The goal of this project was to provide weather information by
+            calling the openweathermap API. I decided to put a personal twist on
+            it by also calling the MapBox API. MapBox gave this app the
+            functionality to parse a user's approximate latitudinal and
+            longitudinal coordinates with very little geographical information,
+            such as a street name and address or a simple city and stat name. My
+            favorite thing about this code is that I am able to repurpose it in
+            many other apps when weather information is needed.
+          </p>
           <hr />
-          <p class="subtext">View here</p>
+          <p class="subtext">
+            <a
+              class="proj-links"
+              href="https://github.com/BainesD/WeatherInfo"
+              target="_blank"
+              >View Source Code</a
+            >
+          </p>
         </div>
       </div>
     </section>

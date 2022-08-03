@@ -34,6 +34,7 @@ ul {
   font-size: 30px;
 }
 
+
 li {
   text-decoration: none;
 }
@@ -56,6 +57,7 @@ p {
 .subtext {
   padding-left: 5px;
   padding-right: 5px;
+  padding-bottom: 5px;
   font-display: wrap;
   font-size: 15px;
   font-weight: 300;
@@ -79,9 +81,10 @@ p {
   border-radius: 30px;
   background-color: coral;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 300;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .button:hover {
@@ -138,10 +141,10 @@ width:50px;
 
 .project-card {
   width: 400px;
-  height: 580px;
+  height: 600px;
   box-shadow: 5px 5px 20px rgb(197, 195, 195);
   margin: 15px;
-  overflow: scroll;
+  overflow: hidden;
   padding: 5px;
 }
 
@@ -168,7 +171,7 @@ width:50px;
 
 
 .project-image {
-  width: -moz-available; 
+  width: 400px; 
   cursor: pointer;
   transition: .3s;
 }
@@ -176,9 +179,7 @@ width:50px;
 /* .project-image:hover {opacity: .7;} */
 
 
-.mySlides:hover .content {
-  opacity: 1;
-}
+
 
 
 * {box-sizing:border-box}
@@ -190,8 +191,12 @@ width:50px;
   text-align: initial;
 }
 
-.mySlides {
+.mySlides1 {
   display: none;
+}
+
+.mySlides1:hover .content {
+  opacity: 1;
 }
 
 .prev, .next {

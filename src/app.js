@@ -20,9 +20,10 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName('mySlides1');
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -36,20 +37,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-const zoomBtn = document.querySelectorAll('.zoom-text')
-const allImages = document.querySelectorAll('.project-image');
-const imageView = document.querySelector('.image-view');
-const nextBtn = document.getElementById('.next-btn');
-const prevBtn = document.getElementById('prev-btn');
-const imageBox = document.querySelector('.image-box');
-
-let currentImageIndex = 0;
-
-imageView.addEventListener('click', function(){
-    this.style.display = "none";
-    imageBox.style.display = "none";
-
-})
 
 zoomBtn.forEach(function(btn, index){
     btn.addEventListener('click', function(){
